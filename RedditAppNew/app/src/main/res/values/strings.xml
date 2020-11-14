@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Reddit App Clone</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Communities</string>
+    <string name="title_notifications">Chats</string>
+    <string name="title_inbox">Inbox</string>
+</resources>

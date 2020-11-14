@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="14dp"
+        android:background="@android:drawable/editbox_background"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="8dp"
+        android:hint="Search..."
+        android:textColorHint="#616161"
+        android:padding="12dp"
+        android:textSize="18dp"
+        tools:ignore="MissingConstraints"
+        android:imeOptions="actionSearch"
+        android:inputType="text"/>
+
+    <Spinner
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_margin="2dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="14dp"
+        android:id="@+id/spinner" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_collection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:orientation="horizontal"
+            tools:listitem="@layout/collection_list"/>
+
+        <ProgressBar
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/webviewLoadingProgressBar"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            style="?android:attr/progressBarStyle"/>
+
+        <TextView
+            android:layout_alignBottom="@id/webviewLoadingProgressBar"
+            android:layout_alignTop="@id/webviewLoadingProgressBar"
+            android:layout_alignRight="@id/webviewLoadingProgressBar"
+            android:layout_alignLeft="@id/webviewLoadingProgressBar"
+            android:text="Loading ..."
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressText"/>
+    </FrameLayout>
+
+
+</LinearLayout>
